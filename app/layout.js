@@ -8,7 +8,7 @@ const vazirmatn = Vazirmatn({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://wealthy-minding.vercel.app/"),
   title: {
     default: "ذهن ثروتمند | ذهن‌آگاهی، رشد فردی و فراوانی",
     template: "%s | ذهن ثروتمند"
