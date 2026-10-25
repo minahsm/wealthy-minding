@@ -14,7 +14,7 @@ const slides = [
     description: "با قدرت ذهن، زندگی آگاهانه و فراوانی را تجربه کن.",
     cta: "مشاهده مقالات",
     href: "/articles/",
-    image: "/images/meditation-in-nature-webp",
+    image: "/images/meditation-in-nature.webp",
     alt: "زنی در حال مدیتیشن در قله کوهستان"
   },
   {
