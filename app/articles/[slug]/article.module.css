@@ -1,0 +1,146 @@
+.article {
+  min-height: 70vh;
+  padding-block: 60px 100px;
+  background-color: var(--color-bg);
+}
+
+.article__container {
+  width: min(100% - 40px, 900px);
+  margin-inline: auto;
+}
+
+.article__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-block-end: 35px;
+}
+
+.article__back:hover {
+  color: var(--color-cta);
+}
+
+.article__content {
+  width: 100%;
+  max-width: 750px;
+  margin-inline: auto;
+}
+
+.article__header {
+  margin-block-end: 30px;
+}
+
+.article__title {
+  color: var(--color-primary);
+  font-size: clamp(26px, 4vw, 36px);
+  line-height: 1.9;
+  font-weight: 800;
+  margin-block-end: 20px;
+}
+
+.article__meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.article__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-block-end: 40px;
+  background-color: #e8e9df;
+}
+
+.article__image {
+  object-fit: cover;
+  position: absolute;
+}
+
+.article__body {
+  color: var(--color-text-main);
+  font-size: 17px;
+  line-height: 2.3;
+  text-align: justify;
+  overflow-wrap: anywhere;
+}
+
+.article__body p {
+  margin-block-end: 24px;
+}
+
+.article__body h2 {
+  color: var(--color-primary);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.9;
+  margin-block: 40px 18px;
+}
+
+.article__footer {
+  border-block-start: 1px solid rgba(36, 72, 61, 0.15);
+  padding-block-start: 25px;
+  margin-block-start: 50px;
+}
+
+.article__footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding-inline: 24px;
+  border-radius: 30px;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.article__footer a:hover {
+  background-color: var(--color-cta);
+}
+
+.article__back:focus-visible,
+.article__footer a:focus-visible {
+  outline: 2px solid var(--color-cta);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .article {
+    padding-block: 35px 70px;
+  }
+
+  .article__container {
+    width: calc(100% - 32px);
+  }
+
+  .article__title {
+    font-size: 25px;
+  }
+
+  .article__body {
+    font-size: 15px;
+    line-height: 2.2;
+  }
+
+  .article__body h2 {
+    font-size: 20px;
+    margin-block: 30px 14px;
+  }
+
+  .article__image-wrapper {
+    aspect-ratio: 4 / 3;
+    margin-block-end: 28px;
+  }
+}

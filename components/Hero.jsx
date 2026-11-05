@@ -33,7 +33,7 @@ const slides = [
     title: "باورهای خود را از نو بشناس",
     description: "با شناخت الگوهای ذهنی، قدم‌های آگاهانه‌تری برای رشد بردار.",
     cta: "سابلیمینال و جذب خواسته ها",
-    href: "#wealth-booklet",
+    href: "/subliminals",
     image: "/images/yoga-stones-balance-nature.webp",
     alt: "سنگ های تعادلی یوگا در طبیعت"
   }

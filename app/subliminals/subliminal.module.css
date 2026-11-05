@@ -1,0 +1,164 @@
+
+.subliminal {
+  min-height: 70vh;
+  padding-block: 80px 100px;
+  background-color: var(--color-bg);
+}
+
+.subliminal__container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.subliminal__header {
+  text-align: center;
+  margin-block-end: 55px;
+}
+
+.subliminal__eyebrow {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 14px;
+  margin-block-end: 14px;
+}
+
+.subliminal__title {
+  color: var(--color-primary);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  margin-block-end: 18px;
+}
+
+.subliminal__description {
+  max-width: 650px;
+  margin-inline: auto;
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 2;
+}
+
+.subliminal__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.subliminal__card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid rgba(36, 72, 61, 0.12);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subliminal__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(36, 72, 61, 0.10);
+}
+
+.subliminal__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: #e8e9df;
+}
+
+.subliminal__image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.subliminal__card:hover .subliminal__image {
+  transform: scale(1.04);
+}
+
+.subliminal__card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+.subliminal__card-title {
+  color: var(--color-primary);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.9;
+  margin-block-end: 12px;
+}
+
+.subliminal__card-description {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 2;
+  margin-block-end: 24px;
+}
+
+.subliminal__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin-block-start: auto;
+  padding-inline: 18px;
+  border-radius: 30px;
+  background-color: var(--color-cta);
+  color: #1E2A24;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.subliminal__button:hover {
+  filter: brightness(0.94);
+  transform: translateY(-2px);
+}
+
+.subliminal__button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1024px) {
+  .subliminal__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .subliminal {
+    padding-block: 50px 70px;
+  }
+
+  .subliminal__container {
+    width: min(100% - 32px, 500px);
+  }
+
+  .subliminal__header {
+    margin-block-end: 35px;
+  }
+
+  .subliminal__description {
+    font-size: 14px;
+  }
+
+  .subliminal__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .subliminal__card-content {
+    padding: 18px;
+  }
+
+  .subliminal__card-title {
+    font-size: 17px;
+  }
+}

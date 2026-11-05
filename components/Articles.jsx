@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, CalendarDays, Sprout } from "lucide-react";
-import styles from "./Articles.module.css";
+import styles from "./Articles.module.css"
 
 const articles = [
   {
@@ -48,7 +48,7 @@ export default function Articles() {
               <p className="section-description">مطالبی برای شناخت ذهن، آرامش و رشد آگاهانه</p>
             </div>
           </div>
-          <Link href="/articles/" className={styles.allArticles}>
+          <Link href="/articles" className={styles.allArticles}>
             مشاهده همه مقالات <ArrowLeft size={17} aria-hidden="true" />
           </Link>
         </div>

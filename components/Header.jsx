@@ -7,10 +7,10 @@ import styles from "./Header.module.css";
 
 const navItems = [
   { label: "خانه", href: "/" },
-  { label: "مقالات", href: "/articles/" },
+  { label: "مقالات", href: "/articles" },
   { label: "جزوه آموزش جذب ثروت", href: "#wealth-booklet" },
-  { label: "سابلیمینال", href: "/subliminal/" },
-  { label: "درباره ما", href: "/about/" },
+  { label: "سابلیمینال", href: "/subliminals" },
+  { label: "درباره ما", href: "#contact" },
   { label: "تماس با ما", href: "#contact" }
 ];
 
