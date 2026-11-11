@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -46,6 +46,10 @@ export default function Hero() {
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
 
+  // متغیرهای مربوط به سوایپ در موبایل
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
   const nextSlide = useCallback(() => {
     setActiveIndex((current) => (current + 1) % slides.length);
   }, []);
@@ -68,17 +72,46 @@ export default function Hero() {
     return () => window.clearInterval(timer);
   }, [paused, reducedMotion, nextSlide]);
 
+  // توابع مربوط به لمس (Swipe) در موبایل
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50; // حداقل ۵۰ پیکسل بکشه تا اسلاید عوض بشه
+
+    if (distance > minSwipeDistance) {
+      nextSlide(); // کشیدن به چپ
+    } else if (distance < -minSwipeDistance) {
+      previousSlide(); // کشیدن به راست
+    }
+    
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
   return (
     <section
       className={styles.hero}
       aria-label="معرفی ذهن ثروتمند"
       aria-roledescription="اسلایدر"
+      // توقف اسلایدر با هاور ماوس
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
       }}
+      // افزودن رویدادهای لمس برای موبایل
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <div className={styles.slides}>
         {slides.map((slide, index) => (
@@ -117,6 +150,7 @@ export default function Hero() {
         ))}
       </div>
 
+      {/* فلش‌های چپ و راست */}
       <button type="button" className={`${styles.arrow} ${styles.previous}`} onClick={previousSlide} aria-label="اسلاید قبلی">
         <ArrowRight size={21} aria-hidden="true" />
       </button>
@@ -124,6 +158,7 @@ export default function Hero() {
         <ArrowLeft size={21} aria-hidden="true" />
       </button>
 
+      {/* نقطه‌های پایین (دکمه توقف/ادامه حذف شد) */}
       <div className={styles.controls}>
         <div className={styles.dots} aria-label="انتخاب اسلاید">
           {slides.map((slide, index) => (
@@ -137,10 +172,8 @@ export default function Hero() {
             />
           ))}
         </div>
-        <button type="button" className={styles.pauseButton} onClick={() => setPaused((value) => !value)}>
-          {paused ? "ادامه" : "توقف"}
-        </button>
       </div>
+      
       <span className={styles.srOnly} aria-live="polite">
         اسلاید {activeIndex + 1} از {slides.length}: {slides[activeIndex].title}
       </span>
