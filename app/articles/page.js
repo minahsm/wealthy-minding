@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { articles } from "../../Data/articles.js";
 import styles from "./articles.module.css";
 
@@ -17,7 +16,7 @@ export default function ArticlesPage() {
 
         <header className={styles["articles__header"]}>
           <span className={styles["articles__eyebrow"]}>
-            دانش و آگاهی
+          
           </span>
 
           <h1 className={styles["articles__title"]}>
@@ -25,8 +24,8 @@ export default function ArticlesPage() {
           </h1>
 
           <p className={styles["articles__description"]}>
-            در مسیر آگاهی، آرامش و رشد فردی همراه ما باشید.
-            مقالاتی درباره ذهن‌آگاهی، تجسم و نگرش ثروت‌آفرین.
+            
+             مقالاتی درباره ذهن‌ آگاهی، تجسم و نگرش ثروت‌ آفرین. در مسیر آگاهی همراه ما باشید.
           </p>
         </header>
 

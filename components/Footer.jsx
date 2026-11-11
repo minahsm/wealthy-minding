@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sprout, Heart } from "lucide-react";
+import { Sprout } from "lucide-react";
 import styles from "./Footer.module.css";
 
 export default function Footer() {

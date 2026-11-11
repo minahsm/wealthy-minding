@@ -6,8 +6,12 @@
   --color-surface: #FCFAF5;
   --color-text-main: #1E2A24;
   --color-text-muted: #6B7280;
-  --color-accent: #d473a0;
+  --color-accent: #A7C4A0;
   --color-border: #E3DED2;
+  --color-cta-main: #A85F3D;
+  --color-cta-hover: #87482F;
+  /*--color-cta-gradient: linear-gradient(180deg, #FFF280 0%, #FFD700 50%, #E6B800 100%);
+  --color-cta-gradient-hover: linear-gradient(180deg, #FFF9B0 0%, #FFD700 50%, #D4A800 100%);*/
   --container-width: 1200px;
   --radius-md: 12px;
   --shadow-card: 0 4px 16px rgb(30 42 36 / 5%);
@@ -87,6 +91,8 @@ a:focus-visible {
   background: var(--color-secondary);
   color: var(--color-primary-dark);
 }
+
+
 
 @media (max-width: 600px) {
   .container {

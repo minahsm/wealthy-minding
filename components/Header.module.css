@@ -80,16 +80,34 @@
 }
 
 .navLink {
+  position: relative;
   display: inline-flex;
   min-height: 34px;
   align-items: center;
   color: #f4f2e9;
   font-size: 0.78rem;
   transition: color 160ms ease;
+  text-decoration: none;
+}
+
+.navLink::after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 0;
+  height: 1.8px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
 }
 
 .navLink:hover {
   color: var(--color-accent);
+  transition: color 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
 }
 
 

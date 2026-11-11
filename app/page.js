@@ -1,9 +1,9 @@
-import Header from "../components/Header";
+
 import Hero from "../components/Hero";
 import Articles from "../components/Articles";
 import PromoBanner from "../components/PromoBanner";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -22,7 +22,7 @@ const jsonLd = {
       "name": "ذهن ثروتمند",
       "inLanguage": "fa-IR",
       "publisher": {
-        "@id": "https://example.com/#organization"
+      "@id": "https://example.com/#organization"
       }
     }
   ]
@@ -35,14 +35,14 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <Header />
+      
       <main>
         <Hero />
         <Articles />
         <PromoBanner />
         <Contact />
       </main>
-      <Footer />
+      
     </>
   );
 }

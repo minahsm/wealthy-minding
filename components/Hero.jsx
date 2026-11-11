@@ -12,8 +12,8 @@ const slides = [
     eyebrow: "ذهن‌آگاهی، رشد فردی، باورهای مالی",
     title: "ذهن تو، بزرگ‌ترین سرمایه توست",
     description: "با قدرت ذهن، زندگی آگاهانه و فراوانی را تجربه کن.",
-    cta: "آشنایی با جزوه آموزشی جذب ثروت",
-    href: "/articles/",
+    cta: "جزوه آموزشی جذب ثروت",
+    href: "#wealth-booklet",
     image: "/images/meditation-in-nature.webp",
     alt: "زنی در حال مدیتیشن در قله کوهستان"
   },
@@ -22,7 +22,7 @@ const slides = [
     eyebrow: "حضور در لحظه و آرامش درونی",
     title: "لحظه اکنون را آگاهانه تجربه کن",
     description: "با تمرین ذهن‌آگاهی، توجه خود را به لحظه حال بازگردان.",
-    cta: "مطالعه مقالات ذهن‌ آگاهی",
+    cta: "مقالات ذهن‌ آگاهی",
     href: "/articles/",
     image: "/images/yoga-pose-on-mountain-peak.webp",
     alt: "فردی در حال یوگا در قله کوهسستان"

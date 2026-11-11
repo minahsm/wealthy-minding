@@ -6,33 +6,35 @@ import styles from "./Articles.module.css"
 const articles = [
   {
     id: 1,
-    title: "قانون جذب؛ واقعیت یا باور؟",
-    excerpt: "با مفهوم باور و نقش آن در برداشت ما از زندگی و رشد فردی آشنا شوید.",
+    title: "قانون جذب چیست؟",
+    excerpt: `      خیلیها هنوز هم که هنوز است تا نام قانون جذب می آید، خوشحال میشوند ! 
+      زیرا حس میکنند قرار است چیزی را با راهی میانبر به دست بیاورند،`,
     date: "۱۴۰۳/۰۸/۰۸",
     dateTime: "2024-10-29",
-    href: "/articles/law-of-attraction/",
+    href: "/articles/law-of-attraction",
     image: "/images/law-of-attraction-metaphysics.webp",
     alt:"انسانی در مرکز امواج مغناطیسی"
   },
   {
     id: 2,
-    title: "مدیتیشن برای آرامش و تمرکز",
-    excerpt: "با تمرین توجه و آگاهی از لحظه حال، فضایی برای آرامش درونی ایجاد کنید.",
+    title: "ذهن‌آگاهی؛ راهی برای رسیدن به آرامش و تمرکز",
+    excerpt:  "ذهن‌آگاهی به ما کمک می‌کند به جای غرق شدن در افکار گذشته و نگرانی‌های آینده، حضور بیشتری در لحظه اکنون داشته باشیم.",
     date: "۱۴۰۳/۰۸/۱۲",
     dateTime: "2024-11-02",
-    href: "/articles/meditation-and-focus/",
+    href: "/articles/mindfulness-and-inner-peace",
     image: "/images/yoga-in-nature-meditation.webp",
-    alt: "فردی در طبیعت در حال مدیتیشن"
+    alt: "تصویر مغز یک فرد و امواج مغناطیسی ساطع شده از آن"
   },
   {
     id: 3,
-    title: "قدرت ذهن در جذب فراوانی",
-    excerpt: "درباره باورهای مالی، ذهنیت فراوانی و شناخت الگوهای فکری بخوانید.",
+    title: "تصویرسازی ذهنی",
+    excerpt: `به چه علت باید با مردمی همزمان و هم‌ عصر بود که برایشان باید
+     با صرف زمان فهماند که تصویر سازی ذهنی شان، برخلاف چیزی که به آنها سالهاست (عمدا) دیکته شده خیالپردازی نیست`,
     date: "۱۴۰۳/۰۸/۱۵",
     dateTime: "2024-11-05",
-    href: "/articles/wealth-mindset/",
-    image: "/images/mind-power-and-abundance.webp",
-    alt: "مغز انسان و امواج مفناطیسی ساطع شده از آن"
+    href: "/articles/visualization-and-energy",
+    image: "/images/mind-imaginary.webp",
+    alt: "تصویر یک خانم در حال مدیتیشن"
   }
 ];
 

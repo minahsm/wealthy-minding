@@ -18,7 +18,7 @@ export default function SubliminalPage() {
         <header className={styles["subliminal__header"]}>
 
           <span className={styles["subliminal__eyebrow"]}>
-            فروشگاه ذهن ثروتمند
+          
           </span>
 
           <h1 className={styles["subliminal__title"]}>
@@ -27,7 +27,7 @@ export default function SubliminalPage() {
 
           <p className={styles["subliminal__description"]}>
             مجموعه‌ای از محتوای صوتی برای همراهی با مسیر
-            خودشناسی، ذهن‌آگاهی و پرورش نگرش سازنده.
+            خودشناسی، ذهن‌آگاهی و پرورش نگرش سازنده
           </p>
 
         </header>
@@ -69,7 +69,7 @@ export default function SubliminalPage() {
                   rel="noopener noreferrer"
                   className={styles["subliminal__button"]}
                 >
-                  سفارش سابلیمینال
+                 همین حالا سفارش بده
                   <span aria-hidden="true">←</span>
                 </a>
 

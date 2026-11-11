@@ -64,6 +64,7 @@
 .article__image {
   object-fit: cover;
   position: absolute;
+  object-position: center 25%;
 }
 
 .article__body {
@@ -99,15 +100,26 @@
   min-height: 46px;
   padding-inline: 24px;
   border-radius: 30px;
-  background-color: var(--color-primary);
+  background-color: var(--color-cta-main);
   color: white;
   text-decoration: none;
   font-size: 14px;
   transition: background-color 0.3s ease;
+   box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1), 
+    0 8px 20px rgba(255, 215, 0, 0.4), /* درخشش زرد */
+    inset 0 2px 2px rgba(255, 255, 255, 0.8), /* نور بالای دکمه */
+    inset 0 -2px 4px rgba(0, 0, 0, 0.05);  
+   
 }
 
 .article__footer a:hover {
-  background-color: var(--color-cta);
+  background-color: var(--color-cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 12px 25px rgba(255, 215, 0, 0.5), 
+    inset 0 2px 2px rgba(255, 255, 255, 1);
 }
 
 .article__back:focus-visible,
