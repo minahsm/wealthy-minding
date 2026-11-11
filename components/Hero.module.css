@@ -191,6 +191,9 @@
 
 @media (max-width: 768px) {
   .hero, .slides, .slideContent { min-height: 430px; }
+  .arrow {
+    display: none !important; /* فلش‌ها در موبایل مخفی می‌شوند */
+  }
   .overlay {
     background: linear-gradient(0deg, rgb(247 244 236 / 96%) 0%, rgb(247 244 236 / 86%) 52%, rgb(247 244 236 / 20%) 100%);
   }
