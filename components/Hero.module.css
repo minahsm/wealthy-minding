@@ -5,6 +5,7 @@
   min-height: 440px;
   background: var(--color-primary-dark);
   color: #fff;
+  touch-action: pan-y; 
 }
 
 .slides {
@@ -169,17 +170,6 @@
   box-shadow: 0 0 0 2px #fff;
 }
 
-.pauseButton {
-  min-width: 48px;
-  min-height: 32px;
-  padding-inline: 8px;
-  border: 1px solid rgb(255 255 255 / 75%);
-  border-radius: 999px;
-  background: rgb(23 56 47 / 80%);
-  color: #fff;
-  font-size: 0.72rem;
-}
-
 .srOnly {
   position: absolute;
   width: 1px;
@@ -190,24 +180,29 @@
 }
 
 @media (max-width: 768px) {
-  .hero, .slides, .slideContent { min-height: 430px; }
+  /* 👈 ارتفاع رو از 430 به 350 کم کردم */
+  .hero, .slides, .slideContent { 
+    min-height: 350px; 
+  }
+  
   .arrow {
     display: none !important; /* فلش‌ها در موبایل مخفی می‌شوند */
   }
+  
   .overlay {
     background: linear-gradient(0deg, rgb(247 244 236 / 96%) 0%, rgb(247 244 236 / 86%) 52%, rgb(247 244 236 / 20%) 100%);
   }
+  
   .slideContent {
     width: calc(100% - 40px);
     justify-content: flex-end;
-    padding-block: 44px 72px;
+    /* 👈 فاصله‌های بالا و پایین رو برای ارتفاع کمتر تنظیم کردم */
+    padding-block: 30px 60px; 
   }
+  
   .eyebrow { font-size: 0.8rem; }
   .title { font-size: clamp(1.7rem, 7vw, 2.2rem); }
-  .description { font-size: 0.9rem; }
-  .arrow { top: 38%; width: 40px; height: 40px; }
-  .previous { inset-inline-start: 10px; }
-  .next { inset-inline-end: 10px; }
+  .description { font-size: 0.9rem; margin-block: 8px 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
