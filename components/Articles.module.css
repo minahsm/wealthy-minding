@@ -139,7 +139,7 @@
   .desktopLink{display: none;}
   .mobileLink{
   color: var(--color-primary);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 600;
   display: flex;
   width: 100%;
