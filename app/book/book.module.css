@@ -1,0 +1,147 @@
+.main {
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+.bookletSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 همه چیز رو وسط‌چین می‌کنه */
+  text-align: center;  /* 👈 متن‌ها رو هم وسط‌چین می‌کنه */
+  padding-block: 64px;
+  padding-inline: 24px;
+  max-width: 800px;
+  margin-inline: auto; /* 👈 کل بخش رو وسط صفحه قرار میده */
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-block-end: 40px; /* 👈 فاصله از متن زیرینش */
+  margin-block-start: 30px;
+}
+
+.bookImage {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1); /* سایه ملایم برای زیبایی */
+}
+
+.decorativeIcon {
+  position: absolute;
+  inset-block-start: -10px;
+  inset-inline-start: 10px;
+  width: 40px;
+  height: 40px;
+  color: var(--color-secondary);
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.eyebrow { 
+  margin: 0 0 12px; 
+  color: var(--color-text-muted); 
+  font-size: 0.95rem; 
+}
+
+.title {
+  margin: 0 0 24px;
+  color: var(--color-primary);
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* سایز ریسپانسیو برای تیتر */
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.description {
+  max-width: 680px; /* 👈 عرض متن رو محدود می‌کنه که توی مانیتورهای بزرگ کشیده نشه */
+  margin-block: 0 20px;
+  color: var(--color-text-main);
+  font-size: 1.05rem;
+  line-height: 2.1;
+  text-align: justify; /* 👈 برای خوانایی بهتر متن‌های فارسی */
+  text-justify: inter-word;
+}
+
+/* استایل دکمه طلایی براق (همون که توی صفحه اصلی داشتیم) */
+.cta {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-inline: 32px;
+  margin-block-start: 16px;
+  border-radius: 999px;
+  background: var(--color-cta-main);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1), 
+    0 8px 20px rgba(255, 215, 0, 0.4),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.05);      
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: var(--color-cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 12px 25px rgba(255, 215, 0, 0.5), 
+    inset 0 2px 2px rgba(255, 255, 255, 1);
+}
+
+/* 🛠️ بخش نظرات کاربران (آماده برای آینده) */
+.reviewsSection {
+  background: #ffffff;
+  padding-block: 64px;
+  border-top: 1px solid var(--color-border);
+}
+
+.reviewsInner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.reviewsTitle {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-block-end: 80px;
+}
+
+.reviewsPlaceholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background: var(--color-bg);
+  border: 2px dashed var(--color-border);
+  border-radius: 16px;
+  color: var(--color-text-muted);
+}
+
+/* 📱 رسپانسیو برای موبایل */
+@media (max-width: 768px) {
+  .bookletSection {
+    padding-block: 40px;
+    padding-inline: 16px;
+  }
+  .title { font-size: 1.6rem; }
+  .description { font-size: 0.95rem; }
+  .cta { width: 100%; max-width: 320px; }
+}

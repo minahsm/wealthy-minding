@@ -8,7 +8,7 @@ import styles from "./Header.module.css";
 const navItems = [
   { label: "خانه", href: "/" },
   { label: "مقالات", href: "/articles" },
-  { label: "جزوه آموزش جذب ثروت", href: "#wealth-booklet" },
+  { label: "جزوه آموزش جذب ثروت", href: "/book" },
   { label: "سابلیمینال", href: "/subliminals" },
   { label: "درباره ما", href: "#contact" },
   { label: "تماس با ما", href: "#contact" }
