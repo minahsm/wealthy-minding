@@ -39,7 +39,7 @@ const slides = [
   }
 ];
 
-const INTERVAL = 6000;
+const INTERVAL = 5000;
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -125,6 +125,8 @@ export default function Hero() {
               alt={slide.alt}
               fill
               priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "low"}
               sizes="(max-width: 768px) 100vw, 1200px"
               className={styles.slideImage}
             />

@@ -38,6 +38,13 @@ const articles = [
   }
 ];
 
+  // 👈 یک کامپوننت کوچیک برای لینک ساختیم تا کد تکراری ننویسیم
+  const ViewAllLink = ({ className }) => (
+    <Link href="/articles" className={`${styles.allArticles} ${className}`}>
+      مشاهده همه مقالات <ArrowLeft size={17} aria-hidden="true" />
+    </Link>
+  );
+
 export default function Articles() {
   return (
     <section className={styles.articles} aria-labelledby="articles-heading">
@@ -50,9 +57,7 @@ export default function Articles() {
               <p className="section-description">مطالبی برای شناخت ذهن، آرامش و رشد آگاهانه</p>
             </div>
           </div>
-          <Link href="/articles" className={styles.allArticles}>
-            مشاهده همه مقالات <ArrowLeft size={17} aria-hidden="true" />
-          </Link>
+          <ViewAllLink className={styles.desktopLink} />
         </div>
 
         <div className={styles.grid}>
@@ -79,6 +84,7 @@ export default function Articles() {
                 <Link href={article.href} className={styles.readMore}>
                   بیشتر بخوانید <ArrowLeft size={16} aria-hidden="true" />
                 </Link>
+                <ViewAllLink className={styles.mobileLink} />
               </div>
             </article>
           ))}
