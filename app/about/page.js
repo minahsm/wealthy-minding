@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className={styles.contentSection}>
         <div className={styles.textWrapper}>
           <h2 className={styles.sectionTitle}>داستان ما</h2>
-          <p className={styles.text}>
+          <p  className={styles.text}>
             «ذهن ثروتمند» از یک باور ساده متولد شد: <strong>ثروت واقعی، ابتدا در ذهن ساخته می‌شود.</strong> 
             ما اینجا جمع شده‌ایم تا با ترکیب دانش روز (مانند تکنولوژی و روانشناسی) و مفاهیم عمیق معنوی (مانند مدیتیشن و قانون جذب)، به شما کمک کنیم تا الگوهای ذهنی محدودکننده را کنار بگذارید و زندگی آگاهانه‌تری را تجربه کنید.
           </p>

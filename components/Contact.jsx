@@ -5,7 +5,7 @@ import styles from "./Contact.module.css";
 const contactItems = [
   { id: "instagram", label: "اینستاگرام", value: "wealthy_minding@", href: "https://instagram.com/wealthy_minding", icon: Instagram },
   { id: "address", label: "آدرس", value: "استان مازندران، شهرستان ساری", href: "/contact/", icon: MapPin },
-  { id: "email", label: "ایمیل", value: "mina.hsm.rzn@gmail.com", href: "mailto:info@example.com", icon: Mail },
+  { id: "email", label: "ایمیل", value: "mina.hsm.rzn@gmail.com", href: "mailto:azadi66h@gmail.com", icon: Mail },
   { id: "phone", label: "شماره تماس", value: "09123456789", href: "tel:+980000000000", icon: Phone }
 ];
 
