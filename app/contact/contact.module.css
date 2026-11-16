@@ -1,0 +1,150 @@
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-block: 64px;
+  padding-inline: 24px;
+}
+
+.header {
+  text-align: center;
+  margin-block-end: 48px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  margin-block-end: 12px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-block-end: 24px;
+}
+
+/* بخش اطلاعات */
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-block-end: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+a.contactItem:hover {
+  transform: translateX(-4px); /* افکت حرکت در RTL */
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-bg);
+  border-radius: 12px;
+  color: var(--color-cta-main);
+  border: 1px solid var(--color-border);
+}
+
+.contactItem h3 {
+  font-size: 1.05rem;
+  color: var(--color-primary-dark);
+  margin: 0 0 4px;
+}
+
+.contactItem p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* بخش فرم */
+.formSection {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--color-bg);
+  transition: border-color 0.2s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #fff;
+}
+
+.submitBtn {
+  background: var(--color-cta-main);
+  color: #1E2A24; 
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-block-start: 8px;
+}
+
+.submitBtn:hover {
+  background: var(--color-cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .title { font-size: 2rem; }
+  .formSection { padding: 24px; }
+}

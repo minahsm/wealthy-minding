@@ -10,8 +10,8 @@ const navItems = [
   { label: "مقالات", href: "/articles" },
   { label: "جزوه آموزش جذب ثروت", href: "/book" },
   { label: "سابلیمینال", href: "/subliminals" },
-  { label: "درباره ما", href: "#contact" },
-  { label: "تماس با ما", href: "#contact" }
+  { label: "درباره ما", href: "/about" },
+  { label: "تماس با ما", href: "/contact" }
 ];
 
 export default function Header() {
